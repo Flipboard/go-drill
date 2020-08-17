@@ -80,6 +80,7 @@ func (q query) build(args []driver.Value) (io.Reader, error) {
 		var s strings.Builder
 		s.WriteString(q.Query)
 		q.Query = s.String()
+		fmt.Println("q.Query", q.Query)
 	} else {
 		// FIXME support parameters
 	}
